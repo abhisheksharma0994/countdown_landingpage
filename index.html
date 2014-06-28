@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.funnyText.css" />
+
+
+
+
+<title>Infossphere</title>
+</head>
+
+<body>
+    <div id="title_container" >
+    <div class="mySelector">iNfOsSpHeRe</div>
+        </div>
+<div class="countdown-container container">
+<div class="clock row">
+<div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_days" class="clock-canvas"></div>
+<div class="text">
+<p class="val">0</p>
+<p class="type-days type-time">DAYS</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item -->
+
+<div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_hours" class="clock-canvas"></div>
+<div class="text">
+<p class="val">0</p>
+<p class="type-hours type-time">HOURS</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item -->
+
+<div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_minutes" class="clock-canvas"></div>
+<div class="text">
+<p class="val">0</p>
+<p class="type-minutes type-time">MINUTES</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item -->
+
+<div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_seconds" class="clock-canvas"></div>
+<div class="text">
+<p class="val">0</p>
+<p class="type-seconds type-time">SECONDS</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item --> 
+</div>
+<!-- /.clock --> 
+</div>
+<!-- /.countdown-wrapper --> 
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
+<script type="text/javascript" src="js/kinetic.js"></script> 
+<script type="text/javascript" src="jquery.final-countdown.js"></script> 
+    <script type="text/javascript" src="js/jquery.funnyText.js"></script>
+     <script type="text/javascript">
+	$(document).ready(function() {
+    $('.mySelector').funnyText({
+        speed: 125,
+        borderColor: 'red green blue yellow;',
+        activeColor: '#e74c3c',
+        color: '#3498db',
+        fontSize: '10em',
+        direction: 'both'
+    });
+});
+</script>
+
+<script src="js/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+	$(document).ready(function() {
+	var d =new Date();
+	d=parseInt((d.getTime())/1000);
+$('.countdown').final_countdown({
+start: '1393986600',
+end: '1397269800',
+now: d,
+selectors: {
+    value_seconds: '.clock-seconds .val',
+    canvas_seconds: 'canvas_seconds',
+    value_minutes: '.clock-minutes .val',
+    canvas_minutes: 'canvas_minutes',
+    value_hours: '.clock-hours .val',
+    canvas_hours: 'canvas_hours',
+    value_days: '.clock-days .val',
+    canvas_days: 'canvas_days'
+},
+seconds: {
+    borderColor: '#7995D5',
+    borderWidth: '6'
+},
+minutes: {
+    borderColor: '#ACC742',
+    borderWidth: '6'
+},
+hours: {
+    borderColor: '#ECEFCB',
+    borderWidth: '6'
+},
+days: {
+    borderColor: '#FF9900',
+    borderWidth: '6'
+}}, function() {
+// Finish callback
+});
+});
+</script>
+    <script type="text/javascript">
+    $.backstretch([
+      "img/1.jpg",
+      "img/2.jpg",
+      "img/3.jpg",
+      "img/4.jpg",
+      "img/5.jpg",
+      ], {
+        fade: 750,
+        duration: 4000
+    });
+</script>
+
+</body>
+</html>
